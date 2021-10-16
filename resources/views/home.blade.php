@@ -1,7 +1,7 @@
-@extends('public/master')
+@extends('layouts/master')
 @section('content')
-    <h1>Home Page</h1>
+    {{-- <h1>Home Page</h1> --}}
 
-    <h3>{{ dump(session('profile')) }}</h3>
+    <h3>{{ session('profile.email') }}</h3>
 
 @endsection

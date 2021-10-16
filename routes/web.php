@@ -17,5 +17,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::view('authenticate', 'login');
-Route::post('authenticate', [Profile::class, 'Login']);
+Route::view('user-login', 'login');
+Route::post('user-login', [Profile::class, 'Login']);
+
+Route::view('user-registration', 'registration');
+Route::post('user-registration', [Profile::class, 'Registration']);
+
+Route::get('logout', [Profile::class, 'Logout']);

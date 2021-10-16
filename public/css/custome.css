@@ -1,3 +1,18 @@
 body{
     background-color: #ededed;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, Arial;
+}
+.cart{
+        margin: 0% 3%;
+}
+.dropdown-toggle{
+        font-size: 17px;
+    text-transform: capitalize;
+}
+.bg-secondary {
+    background-color: #565e65!important;
+}
+.admin-login{
+        margin-top: 11%;
 }

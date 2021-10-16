@@ -16,8 +16,23 @@
                     <a class="nav-link" href="javascript:void(0)">About us</a>
                 </li>
             </ul>
-            <a href="javascript:void(0)" class="btn btn-info">Cart(0)</a>
-            <a href="{{ url('authenticate') }}" class="btn btn-danger">Login</a>
+            <a href="javascript:void(0)" class="btn btn-info cart">Cart(0)</a>
+            @if (session()->has('profile'))
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ session('profile.name') }}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Order History</a></li>
+                        <li><a class="dropdown-item" href="#">Account Setting</a></li>
+                        <li><a class="dropdown-item" href="logout">Logout</a></li>
+                    </ul>
+                </div>
+            @else
+                <a href="{{ url('user-login') }}" class="btn btn-danger">Login</a>
+            @endif
+
         </div>
     </div>
 </nav>

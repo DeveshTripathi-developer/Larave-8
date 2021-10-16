@@ -1,11 +1,11 @@
-@extends('layouts/master')
+@extends('panel/admin-layouts/master')
 @section('content')
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
-            <div class="col-md-5 offset-3 border border-2 rounded-2 border-warning bg-warning p-3">
+            <div class="col-md-4 offset-4 border border-2 rounded-2 border-warning bg-warning p-3 admin-login">
                 <h3 class="text-center">User Login</h3>
                 <hr>
-                <form method="POST" action="user-login">
+                <form method="POST" action="login">
                     @csrf
                     <div class="mb-3 mt-3">
                         <label for="email">Email:</label>

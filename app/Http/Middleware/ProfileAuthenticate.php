@@ -16,7 +16,8 @@ class ProfileAuthenticate
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->path() == "authenticate" && $request->session()->has('profile')) {
+        $AfterLogin = array("user-registration", "user-login");
+        if (in_array($request->path(), $AfterLogin)  && $request->session()->has('profile')) {
             return redirect('/');
         }
         return $next($request);
